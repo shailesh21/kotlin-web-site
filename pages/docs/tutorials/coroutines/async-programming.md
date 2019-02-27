@@ -147,7 +147,7 @@ Take for instance the following code
 
 ```kotlin
 fun postItem(item: Item) {
-    launch {
+    GlobalScope.launch {
         val token = preparePost()
         val post = submitPost(token, item)
         processPost(post)
